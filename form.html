@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Form</title>
+
+    <style>
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Form Container */
+#form {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* Inputs, Select, Textarea */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106,17,203,0.3);
+    outline: none;
+}
+
+/* Textarea resize */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Radio & Checkbox Styling */
+input[type="radio"],
+input[type="checkbox"] {
+    transform: scale(1.1);
+    margin-right: 6px;
+    accent-color: #6a11cb;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Headings inside form (optional) */
+#form h1, #form h2, #form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+</style>
+
+</head>
+
+<body>
+    <form action="" id="form">
+        <div>
+            <label for="name">Name:
+                <input type="text" id="name">
+            </label>
+        </div>
+        <div>
+            <label for="email">Email:
+                <input type="email" id="email">
+            </label>
+        </div>
+        <div>
+            <label for="contact">Contact:
+                <input type="text" id="contact">
+            </label>
+        </div>
+        <div>
+            <label for="password">Password:
+                <input type="text" id="password">
+            </label>
+        </div>
+        <div>
+            <label for="gender">Gender: <br>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </label>
+        </div>
+        <div>
+            <label for="subject">Subject: </label>
+            <label for="bangla">Bangla:
+                <input type="checkbox" name="subject" id="bangla" value="Bangla">
+            </label>
+            <label for="English">English:
+                <input type="checkbox" name="subject" id="English" value="English">
+            </label>
+            <label for="Math">Math:
+                <input type="checkbox" name="subject" id="Math" value="Math">
+            </label>
+            <label for="ICT">ICT:
+                <input type="checkbox" name="subject" id="ICT" value="ICT">
+            </label>
+        </div>
+        <div>
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="Dhaka">Dhaka</option>
+                <option value="Khulna">Khulna</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Barishal">Barishal</option>
+            </select>
+        </div>
+        <div>
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment"></textarea>
+        </div>
+
+        <div>
+            <input type="submit"  value="Submit" id="submit" onclick="FormSubmit.submitForm()" />
+        </div>
+    </form>
+
+
+
+    <script src="form.class.js"></script>
+</body>
+
+</html>
